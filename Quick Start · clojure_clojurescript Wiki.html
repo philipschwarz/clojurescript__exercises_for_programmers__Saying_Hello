@@ -1,0 +1,1453 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" class=" is-copy-enabled emoji-size-boost is-u2f-enabled">
+  <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# object: http://ogp.me/ns/object# article: http://ogp.me/ns/article# profile: http://ogp.me/ns/profile#">
+    <meta charset='utf-8'>
+
+    <link crossorigin="anonymous" href="https://assets-cdn.github.com/assets/frameworks-c5cd2ba67aee15dbe66a1911d55456974cf01cf43b09716f49aee6d91d6daca4.css" integrity="sha256-xc0rpnruFdvmahkR1VRWl0zwHPQ7CXFvSa7m2R1trKQ=" media="all" rel="stylesheet" />
+    <link crossorigin="anonymous" href="https://assets-cdn.github.com/assets/github-41234c54b27c35a470af0756de2199addaa8f9bc47b98caccc7754cdbad4e480.css" integrity="sha256-QSNMVLJ8NaRwrwdW3iGZrdqo+bxHuYyszHdUzbrU5IA=" media="all" rel="stylesheet" />
+    
+    
+    
+    
+
+    <link as="script" href="https://assets-cdn.github.com/assets/frameworks-7d972a322dae1542abb7cb60f0de07aea97b141be4e33ab42ec004458eac25f4.js" rel="preload" />
+    <link as="script" href="https://assets-cdn.github.com/assets/github-7f158629d2948c9cf8a1d9338379fa68abd038bb815299a8fb076c4557aa89c8.js" rel="preload" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Language" content="en">
+    <meta name="viewport" content="width=1020">
+    
+    
+    <title>Quick Start · clojure/clojurescript Wiki</title>
+    <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="GitHub">
+    <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
+    <meta property="fb:app_id" content="1401488693436528">
+
+      <meta content="https://avatars0.githubusercontent.com/u/317875?v=3&amp;s=400" name="twitter:image:src" /><meta content="@github" name="twitter:site" /><meta content="summary" name="twitter:card" /><meta content="clojure/clojurescript" name="twitter:title" /><meta content="clojurescript - Clojure to JS compiler" name="twitter:description" />
+      <meta content="https://avatars0.githubusercontent.com/u/317875?v=3&amp;s=400" property="og:image" /><meta content="GitHub" property="og:site_name" /><meta content="object" property="og:type" /><meta content="clojure/clojurescript" property="og:title" /><meta content="https://github.com/clojure/clojurescript" property="og:url" /><meta content="clojurescript - Clojure to JS compiler" property="og:description" />
+      <meta name="browser-stats-url" content="https://api.github.com/_private/browser/stats">
+    <meta name="browser-errors-url" content="https://api.github.com/_private/browser/errors">
+    <link rel="assets" href="https://assets-cdn.github.com/">
+    <link rel="web-socket" href="wss://live.github.com/_sockets/MTE2ODA0OmJkOGY4OGU1NTNiMGUyYTdlYmJiZmIyOWZkOWEyN2JlOmQzZGJkOGZkYzc4ZmU1YjhhNzNiMmI0M2JlOGQ3OWQ5ZTRjNzVkMjZlYjNiNTE4NGQ1MjAxZjBkMmNjNmIwMTU=--3be109385cfe2ff40bd45f64146280da4ca60c6a">
+    <meta name="pjax-timeout" content="1000">
+    <link rel="sudo-modal" href="/sessions/sudo_modal">
+
+    <meta name="msapplication-TileImage" content="/windows-tile.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="selected-link" value="repo_wiki" data-pjax-transient>
+
+    <meta name="google-site-verification" content="KT5gs8h0wvaagLKAVWq8bbeNwnZZK1r1XQysX3xurLU">
+<meta name="google-site-verification" content="ZzhVyEFwb7w3e0-uOTltm8Jsck2F5StVihD0exw2fsA">
+    <meta name="google-analytics" content="UA-3769691-2">
+
+<meta content="collector.githubapp.com" name="octolytics-host" /><meta content="github" name="octolytics-app-id" /><meta content="56B7346B:3F8D:14126200:56F53AC6" name="octolytics-dimension-request_id" /><meta content="116804" name="octolytics-actor-id" /><meta content="philipschwarz" name="octolytics-actor-login" /><meta content="500844985efde914b7cb7083e4b58d96cd882d783a3fc944459c29a232f7a1c0" name="octolytics-actor-hash" />
+<meta content="/&lt;user-name&gt;/&lt;repo-name&gt;/wiki/show" data-pjax-transient="true" name="analytics-location" />
+
+
+
+  <meta class="js-ga-set" name="dimension1" content="Logged In">
+
+
+
+        <meta name="hostname" content="github.com">
+    <meta name="user-login" content="philipschwarz">
+
+        <meta name="expected-hostname" content="github.com">
+      <meta name="js-proxy-site-detection-payload" content="Y2JhMTU2YTRlMGEyNjBiMTRiMTZhNTdlZDJiYjJiZmQ5ZGRiYTVkMDQwZDdkY2RlZmRiM2FhNzlkOTNhNDM3Nnx7InJlbW90ZV9hZGRyZXNzIjoiODYuMTgzLjUyLjEwNyIsInJlcXVlc3RfaWQiOiI1NkI3MzQ2QjozRjhEOjE0MTI2MjAwOjU2RjUzQUM2IiwidGltZXN0YW1wIjoxNDU4OTExOTQyfQ==">
+
+      <link rel="mask-icon" href="https://assets-cdn.github.com/pinned-octocat.svg" color="#4078c0">
+      <link rel="icon" type="image/x-icon" href="https://assets-cdn.github.com/favicon.ico">
+
+    <meta content="21328eb114e1ea3d0848d7717013eda11755c4fb" name="form-nonce" />
+
+    <meta http-equiv="x-pjax-version" content="6728e1e25b5a2d3e558a4b3d5c113520">
+    
+
+      
+  <meta name="description" content="clojurescript - Clojure to JS compiler">
+  <meta name="go-import" content="github.com/clojure/clojurescript git https://github.com/clojure/clojurescript.git">
+
+  <meta content="317875" name="octolytics-dimension-user_id" /><meta content="clojure" name="octolytics-dimension-user_login" /><meta content="2080922" name="octolytics-dimension-repository_id" /><meta content="clojure/clojurescript" name="octolytics-dimension-repository_nwo" /><meta content="true" name="octolytics-dimension-repository_public" /><meta content="false" name="octolytics-dimension-repository_is_fork" /><meta content="2080922" name="octolytics-dimension-repository_network_root_id" /><meta content="clojure/clojurescript" name="octolytics-dimension-repository_network_root_nwo" />
+  <link href="https://github.com/clojure/clojurescript/commits/master.atom" rel="alternate" title="Recent Commits to clojurescript:master" type="application/atom+xml">
+
+
+  </head>
+
+
+  <body class="logged-in   env-production macintosh vis-public">
+    <div id="js-pjax-loader-bar" class="pjax-loader-bar"></div>
+    <a href="#start-of-content" tabindex="1" class="accessibility-aid js-skip-to-content">Skip to content</a>
+
+    
+    
+    
+
+
+
+        <div class="header header-logged-in true" role="banner">
+  <div class="container clearfix">
+
+    <a class="header-logo-invertocat" href="https://github.com/orgs/code-repos/dashboard" data-hotkey="g d" aria-label="Homepage" data-ga-click="Header, go to dashboard, icon:logo">
+  <svg aria-hidden="true" class="octicon octicon-mark-github" height="28" role="img" version="1.1" viewBox="0 0 16 16" width="28"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59 0.4 0.07 0.55-0.17 0.55-0.38 0-0.19-0.01-0.82-0.01-1.49-2.01 0.37-2.53-0.49-2.69-0.94-0.09-0.23-0.48-0.94-0.82-1.13-0.28-0.15-0.68-0.52-0.01-0.53 0.63-0.01 1.08 0.58 1.23 0.82 0.72 1.21 1.87 0.87 2.33 0.66 0.07-0.52 0.28-0.87 0.51-1.07-1.78-0.2-3.64-0.89-3.64-3.95 0-0.87 0.31-1.59 0.82-2.15-0.08-0.2-0.36-1.02 0.08-2.12 0 0 0.67-0.21 2.2 0.82 0.64-0.18 1.32-0.27 2-0.27 0.68 0 1.36 0.09 2 0.27 1.53-1.04 2.2-0.82 2.2-0.82 0.44 1.1 0.16 1.92 0.08 2.12 0.51 0.56 0.82 1.27 0.82 2.15 0 3.07-1.87 3.75-3.65 3.95 0.29 0.25 0.54 0.73 0.54 1.48 0 1.07-0.01 1.93-0.01 2.2 0 0.21 0.15 0.46 0.55 0.38C13.71 14.53 16 11.53 16 8 16 3.58 12.42 0 8 0z"></path></svg>
+</a>
+
+
+        <div class="header-search scoped-search site-scoped-search js-site-search" role="search">
+  <!-- </textarea> --><!-- '"` --><form accept-charset="UTF-8" action="/clojure/clojurescript/search" class="js-site-search-form" data-scoped-search-url="/clojure/clojurescript/search" data-unscoped-search-url="/search" method="get"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /></div>
+    <label class="form-control header-search-wrapper js-chromeless-input-container">
+      <div class="header-search-scope">This repository</div>
+      <input type="text"
+        class="form-control header-search-input js-site-search-focus js-site-search-field is-clearable"
+        data-hotkey="s"
+        name="q"
+        placeholder="Search"
+        aria-label="Search this repository"
+        data-unscoped-placeholder="Search GitHub"
+        data-scoped-placeholder="Search"
+        tabindex="1"
+        autocapitalize="off">
+    </label>
+</form></div>
+
+
+      <ul class="header-nav left" role="navigation">
+        <li class="header-nav-item">
+          <a href="/pulls" class="js-selected-navigation-item header-nav-link" data-ga-click="Header, click, Nav menu - item:pulls context:user" data-hotkey="g p" data-selected-links="/pulls /pulls/assigned /pulls/mentioned /pulls">
+            Pull requests
+</a>        </li>
+        <li class="header-nav-item">
+          <a href="/issues" class="js-selected-navigation-item header-nav-link" data-ga-click="Header, click, Nav menu - item:issues context:user" data-hotkey="g i" data-selected-links="/issues /issues/assigned /issues/mentioned /issues">
+            Issues
+</a>        </li>
+          <li class="header-nav-item">
+            <a class="header-nav-link" href="https://gist.github.com/" data-ga-click="Header, go to gist, text:gist">Gist</a>
+          </li>
+      </ul>
+
+    
+<ul class="header-nav user-nav right" id="user-links">
+  <li class="header-nav-item">
+    
+    <a href="/notifications" aria-label="You have unread notifications" class="header-nav-link notification-indicator tooltipped tooltipped-s js-socket-channel js-notification-indicator" data-channel="notification-changed-v2:116804" data-ga-click="Header, go to notifications, icon:unread" data-hotkey="g n">
+        <span class="mail-status unread"></span>
+        <svg aria-hidden="true" class="octicon octicon-bell" height="16" role="img" version="1.1" viewBox="0 0 14 16" width="14"><path d="M14 12v1H0v-1l0.73-0.58c0.77-0.77 0.81-2.55 1.19-4.42 0.77-3.77 4.08-5 4.08-5 0-0.55 0.45-1 1-1s1 0.45 1 1c0 0 3.39 1.23 4.16 5 0.38 1.88 0.42 3.66 1.19 4.42l0.66 0.58z m-7 4c1.11 0 2-0.89 2-2H5c0 1.11 0.89 2 2 2z"></path></svg>
+</a>
+  </li>
+
+  <li class="header-nav-item dropdown js-menu-container">
+    <a class="header-nav-link tooltipped tooltipped-s js-menu-target" href="/new"
+       aria-label="Create new…"
+       data-ga-click="Header, create new, icon:add">
+      <svg aria-hidden="true" class="octicon octicon-plus left" height="16" role="img" version="1.1" viewBox="0 0 12 16" width="12"><path d="M12 9H7v5H5V9H0V7h5V2h2v5h5v2z"></path></svg>
+      <span class="dropdown-caret"></span>
+    </a>
+
+    <div class="dropdown-menu-content js-menu-content">
+      <ul class="dropdown-menu dropdown-menu-sw">
+        
+<a class="dropdown-item" href="/new" data-ga-click="Header, create new repository">
+  New repository
+</a>
+
+
+  <a class="dropdown-item" href="/organizations/new" data-ga-click="Header, create new organization">
+    New organization
+  </a>
+
+
+
+
+      </ul>
+    </div>
+  </li>
+
+  <li class="header-nav-item dropdown js-menu-container">
+    <a class="header-nav-link name tooltipped tooltipped-sw js-menu-target" href="/philipschwarz"
+       aria-label="View profile and more"
+       data-ga-click="Header, show menu, icon:avatar">
+      <img alt="@philipschwarz" class="avatar" height="20" src="https://avatars3.githubusercontent.com/u/116804?v=3&amp;s=40" width="20" />
+      <span class="dropdown-caret"></span>
+    </a>
+
+    <div class="dropdown-menu-content js-menu-content">
+      <div class="dropdown-menu  dropdown-menu-sw">
+        <div class=" dropdown-header header-nav-current-user css-truncate">
+            Signed in as <strong class="css-truncate-target">philipschwarz</strong>
+
+        </div>
+
+
+        <div class="dropdown-divider"></div>
+
+          <a class="dropdown-item" href="/philipschwarz" data-ga-click="Header, go to profile, text:your profile">
+            Your profile
+          </a>
+        <a class="dropdown-item" href="/stars" data-ga-click="Header, go to starred repos, text:your stars">
+          Your stars
+        </a>
+          <a class="dropdown-item" href="/explore" data-ga-click="Header, go to explore, text:explore">
+            Explore
+          </a>
+          <a class="dropdown-item" href="/integrations" data-ga-click="Header, go to integrations, text:integrations">
+            Integrations
+          </a>
+        <a class="dropdown-item" href="https://help.github.com" data-ga-click="Header, go to help, text:help">
+          Help
+        </a>
+
+
+          <div class="dropdown-divider"></div>
+
+          <a class="dropdown-item" href="/settings/profile" data-ga-click="Header, go to settings, icon:settings">
+            Settings
+          </a>
+
+          <!-- </textarea> --><!-- '"` --><form accept-charset="UTF-8" action="/logout" class="logout-form" data-form-nonce="21328eb114e1ea3d0848d7717013eda11755c4fb" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="QfHpzhtDaU/LxpixRqKbgWc/JfgCLwhcgGqLasRxVXIgNRn3M8B0fCS4YK+D47Ag29daKs7olGGX6DBqpmmDWA==" /></div>
+            <button class="dropdown-item dropdown-signout" data-ga-click="Header, sign out, icon:logout">
+              Sign out
+            </button>
+</form>
+      </div>
+    </div>
+  </li>
+</ul>
+
+
+    
+  </div>
+</div>
+
+
+      
+
+
+    <div id="start-of-content" class="accessibility-aid"></div>
+
+      <div id="js-flash-container">
+</div>
+
+
+    <div role="main" class="main-content">
+        <div itemscope itemtype="http://schema.org/SoftwareSourceCode">
+    <div id="js-repo-pjax-container" data-pjax-container>
+      
+<div class="pagehead repohead instapaper_ignore readability-menu experiment-repo-nav">
+  <div class="container repohead-details-container">
+
+    
+
+<ul class="pagehead-actions">
+
+  <li>
+        <!-- </textarea> --><!-- '"` --><form accept-charset="UTF-8" action="/notifications/subscribe" class="js-social-container" data-autosubmit="true" data-form-nonce="21328eb114e1ea3d0848d7717013eda11755c4fb" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="WsE98NiOzFcj9v+KBAjAa2xxdUsk3qi8CPU79MIu6jjJNVxb+2xLb8nEHTGOJwhcXgWYwIYUHQOgfT9TTjrWzA==" /></div>      <input class="form-control" id="repository_id" name="repository_id" type="hidden" value="2080922" />
+
+        <div class="select-menu js-menu-container js-select-menu">
+          <a href="/clojure/clojurescript/subscription"
+            class="btn btn-sm btn-with-count select-menu-button js-menu-target" role="button" tabindex="0" aria-haspopup="true"
+            data-ga-click="Repository, click Watch settings, action:wiki#show">
+            <span class="js-select-button">
+              <svg aria-hidden="true" class="octicon octicon-eye" height="16" role="img" version="1.1" viewBox="0 0 16 16" width="16"><path d="M8.06 2C3 2 0 8 0 8s3 6 8.06 6c4.94 0 7.94-6 7.94-6S13 2 8.06 2z m-0.06 10c-2.2 0-4-1.78-4-4 0-2.2 1.8-4 4-4 2.22 0 4 1.8 4 4 0 2.22-1.78 4-4 4z m2-4c0 1.11-0.89 2-2 2s-2-0.89-2-2 0.89-2 2-2 2 0.89 2 2z"></path></svg>
+              Watch
+            </span>
+          </a>
+          <a class="social-count js-social-count" href="/clojure/clojurescript/watchers">
+            406
+          </a>
+
+        <div class="select-menu-modal-holder">
+          <div class="select-menu-modal subscription-menu-modal js-menu-content" aria-hidden="true">
+            <div class="select-menu-header js-navigation-enable" tabindex="-1">
+              <svg aria-label="Close" class="octicon octicon-x js-menu-close" height="16" role="img" version="1.1" viewBox="0 0 12 16" width="12"><path d="M7.48 8l3.75 3.75-1.48 1.48-3.75-3.75-3.75 3.75-1.48-1.48 3.75-3.75L0.77 4.25l1.48-1.48 3.75 3.75 3.75-3.75 1.48 1.48-3.75 3.75z"></path></svg>
+              <span class="select-menu-title">Notifications</span>
+            </div>
+
+              <div class="select-menu-list js-navigation-container" role="menu">
+
+                <div class="select-menu-item js-navigation-item selected" role="menuitem" tabindex="0">
+                  <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" role="img" version="1.1" viewBox="0 0 12 16" width="12"><path d="M12 5L4 13 0 9l1.5-1.5 2.5 2.5 6.5-6.5 1.5 1.5z"></path></svg>
+                  <div class="select-menu-item-text">
+                    <input checked="checked" id="do_included" name="do" type="radio" value="included" />
+                    <span class="select-menu-item-heading">Not watching</span>
+                    <span class="description">Be notified when participating or @mentioned.</span>
+                    <span class="js-select-button-text hidden-select-button-text">
+                      <svg aria-hidden="true" class="octicon octicon-eye" height="16" role="img" version="1.1" viewBox="0 0 16 16" width="16"><path d="M8.06 2C3 2 0 8 0 8s3 6 8.06 6c4.94 0 7.94-6 7.94-6S13 2 8.06 2z m-0.06 10c-2.2 0-4-1.78-4-4 0-2.2 1.8-4 4-4 2.22 0 4 1.8 4 4 0 2.22-1.78 4-4 4z m2-4c0 1.11-0.89 2-2 2s-2-0.89-2-2 0.89-2 2-2 2 0.89 2 2z"></path></svg>
+                      Watch
+                    </span>
+                  </div>
+                </div>
+
+                <div class="select-menu-item js-navigation-item " role="menuitem" tabindex="0">
+                  <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" role="img" version="1.1" viewBox="0 0 12 16" width="12"><path d="M12 5L4 13 0 9l1.5-1.5 2.5 2.5 6.5-6.5 1.5 1.5z"></path></svg>
+                  <div class="select-menu-item-text">
+                    <input id="do_subscribed" name="do" type="radio" value="subscribed" />
+                    <span class="select-menu-item-heading">Watching</span>
+                    <span class="description">Be notified of all conversations.</span>
+                    <span class="js-select-button-text hidden-select-button-text">
+                      <svg aria-hidden="true" class="octicon octicon-eye" height="16" role="img" version="1.1" viewBox="0 0 16 16" width="16"><path d="M8.06 2C3 2 0 8 0 8s3 6 8.06 6c4.94 0 7.94-6 7.94-6S13 2 8.06 2z m-0.06 10c-2.2 0-4-1.78-4-4 0-2.2 1.8-4 4-4 2.22 0 4 1.8 4 4 0 2.22-1.78 4-4 4z m2-4c0 1.11-0.89 2-2 2s-2-0.89-2-2 0.89-2 2-2 2 0.89 2 2z"></path></svg>
+                      Unwatch
+                    </span>
+                  </div>
+                </div>
+
+                <div class="select-menu-item js-navigation-item " role="menuitem" tabindex="0">
+                  <svg aria-hidden="true" class="octicon octicon-check select-menu-item-icon" height="16" role="img" version="1.1" viewBox="0 0 12 16" width="12"><path d="M12 5L4 13 0 9l1.5-1.5 2.5 2.5 6.5-6.5 1.5 1.5z"></path></svg>
+                  <div class="select-menu-item-text">
+                    <input id="do_ignore" name="do" type="radio" value="ignore" />
+                    <span class="select-menu-item-heading">Ignoring</span>
+                    <span class="description">Never be notified.</span>
+                    <span class="js-select-button-text hidden-select-button-text">
+                      <svg aria-hidden="true" class="octicon octicon-mute" height="16" role="img" version="1.1" viewBox="0 0 16 16" width="16"><path d="M8 2.81v10.38c0 0.67-0.81 1-1.28 0.53L3 10H1c-0.55 0-1-0.45-1-1V7c0-0.55 0.45-1 1-1h2l3.72-3.72c0.47-0.47 1.28-0.14 1.28 0.53z m7.53 3.22l-1.06-1.06-1.97 1.97-1.97-1.97-1.06 1.06 1.97 1.97-1.97 1.97 1.06 1.06 1.97-1.97 1.97 1.97 1.06-1.06-1.97-1.97 1.97-1.97z"></path></svg>
+                      Stop ignoring
+                    </span>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+</form>
+  </li>
+
+  <li>
+    
+  <div class="js-toggler-container js-social-container starring-container ">
+
+    <!-- </textarea> --><!-- '"` --><form accept-charset="UTF-8" action="/clojure/clojurescript/unstar" class="js-toggler-form starred" data-form-nonce="21328eb114e1ea3d0848d7717013eda11755c4fb" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="sCRVODwpS8g2BLoxbDTG29sESV8O5Wvr1F4GPZiMN1Y/Ajg5RSrNCXUkWhn68S4FrI/XZdpF9idj7HyJOv9POQ==" /></div>
+      <button
+        class="btn btn-sm btn-with-count js-toggler-target"
+        aria-label="Unstar this repository" title="Unstar clojure/clojurescript"
+        data-ga-click="Repository, click unstar button, action:wiki#show; text:Unstar">
+        <svg aria-hidden="true" class="octicon octicon-star" height="16" role="img" version="1.1" viewBox="0 0 14 16" width="14"><path d="M14 6l-4.9-0.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14l4.33-2.33 4.33 2.33L10.4 9.26 14 6z"></path></svg>
+        Unstar
+      </button>
+        <a class="social-count js-social-count" href="/clojure/clojurescript/stargazers">
+          5,834
+        </a>
+</form>
+    <!-- </textarea> --><!-- '"` --><form accept-charset="UTF-8" action="/clojure/clojurescript/star" class="js-toggler-form unstarred" data-form-nonce="21328eb114e1ea3d0848d7717013eda11755c4fb" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="ml89rt3ZFZIOWzvteqCJy/hOKFjr+wYPhLcIBXMr6Z6CJF12LBZSF6cLW1n43LDCXvUvpxqCNfhyTSgNUCokvA==" /></div>
+      <button
+        class="btn btn-sm btn-with-count js-toggler-target"
+        aria-label="Star this repository" title="Star clojure/clojurescript"
+        data-ga-click="Repository, click star button, action:wiki#show; text:Star">
+        <svg aria-hidden="true" class="octicon octicon-star" height="16" role="img" version="1.1" viewBox="0 0 14 16" width="14"><path d="M14 6l-4.9-0.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14l4.33-2.33 4.33 2.33L10.4 9.26 14 6z"></path></svg>
+        Star
+      </button>
+        <a class="social-count js-social-count" href="/clojure/clojurescript/stargazers">
+          5,834
+        </a>
+</form>  </div>
+
+  </li>
+
+  <li>
+          <a href="#fork-destination-box" class="btn btn-sm btn-with-count"
+              title="Fork your own copy of clojure/clojurescript to your account"
+              aria-label="Fork your own copy of clojure/clojurescript to your account"
+              rel="facebox"
+              data-ga-click="Repository, show fork modal, action:wiki#show; text:Fork">
+              <svg aria-hidden="true" class="octicon octicon-repo-forked" height="16" role="img" version="1.1" viewBox="0 0 10 16" width="10"><path d="M8 1c-1.11 0-2 0.89-2 2 0 0.73 0.41 1.38 1 1.72v1.28L5 8 3 6v-1.28c0.59-0.34 1-0.98 1-1.72 0-1.11-0.89-2-2-2S0 1.89 0 3c0 0.73 0.41 1.38 1 1.72v1.78l3 3v1.78c-0.59 0.34-1 0.98-1 1.72 0 1.11 0.89 2 2 2s2-0.89 2-2c0-0.73-0.41-1.38-1-1.72V9.5l3-3V4.72c0.59-0.34 1-0.98 1-1.72 0-1.11-0.89-2-2-2zM2 4.2c-0.66 0-1.2-0.55-1.2-1.2s0.55-1.2 1.2-1.2 1.2 0.55 1.2 1.2-0.55 1.2-1.2 1.2z m3 10c-0.66 0-1.2-0.55-1.2-1.2s0.55-1.2 1.2-1.2 1.2 0.55 1.2 1.2-0.55 1.2-1.2 1.2z m3-10c-0.66 0-1.2-0.55-1.2-1.2s0.55-1.2 1.2-1.2 1.2 0.55 1.2 1.2-0.55 1.2-1.2 1.2z"></path></svg>
+            Fork
+          </a>
+
+          <div id="fork-destination-box" style="display: none;">
+            <h2 class="facebox-header" data-facebox-id="facebox-header">Where should we fork this repository?</h2>
+            <include-fragment src=""
+                class="js-fork-select-fragment fork-select-fragment"
+                data-url="/clojure/clojurescript/fork?fragment=1">
+              <img alt="Loading" height="64" src="https://assets-cdn.github.com/images/spinners/octocat-spinner-128.gif" width="64" />
+            </include-fragment>
+          </div>
+
+    <a href="/clojure/clojurescript/network" class="social-count">
+      513
+    </a>
+  </li>
+</ul>
+
+    <h1 class="entry-title public ">
+  <svg aria-hidden="true" class="octicon octicon-repo" height="16" role="img" version="1.1" viewBox="0 0 12 16" width="12"><path d="M4 9h-1v-1h1v1z m0-3h-1v1h1v-1z m0-2h-1v1h1v-1z m0-2h-1v1h1v-1z m8-1v12c0 0.55-0.45 1-1 1H6v2l-1.5-1.5-1.5 1.5V14H1c-0.55 0-1-0.45-1-1V1C0 0.45 0.45 0 1 0h10c0.55 0 1 0.45 1 1z m-1 10H1v2h2v-1h3v1h5V11z m0-10H2v9h9V1z"></path></svg>
+  <span class="author" itemprop="author"><a href="/clojure" class="url fn" rel="author">clojure</a></span><!--
+--><span class="path-divider">/</span><!--
+--><strong itemprop="name"><a href="/clojure/clojurescript" data-pjax="#js-repo-pjax-container">clojurescript</a></strong>
+
+</h1>
+
+  </div>
+  <div class="container">
+    
+<nav class="reponav js-repo-nav js-sidenav-container-pjax"
+     itemscope
+     itemtype="http://schema.org/BreadcrumbList"
+     role="navigation"
+     data-pjax="#js-repo-pjax-container">
+
+  <span itemscope itemtype="http://schema.org/ListItem" itemprop="itemListElement">
+    <a href="/clojure/clojurescript" class="js-selected-navigation-item reponav-item" data-hotkey="g c" data-selected-links="repo_source repo_downloads repo_commits repo_releases repo_tags repo_branches /clojure/clojurescript" itemprop="url">
+      <svg aria-hidden="true" class="octicon octicon-code" height="16" role="img" version="1.1" viewBox="0 0 14 16" width="14"><path d="M9.5 3l-1.5 1.5 3.5 3.5L8 11.5l1.5 1.5 4.5-5L9.5 3zM4.5 3L0 8l4.5 5 1.5-1.5L2.5 8l3.5-3.5L4.5 3z"></path></svg>
+      <span itemprop="name">Code</span>
+      <meta itemprop="position" content="1">
+</a>  </span>
+
+
+  <span itemscope itemtype="http://schema.org/ListItem" itemprop="itemListElement">
+    <a href="/clojure/clojurescript/pulls" class="js-selected-navigation-item reponav-item" data-hotkey="g p" data-selected-links="repo_pulls /clojure/clojurescript/pulls" itemprop="url">
+      <svg aria-hidden="true" class="octicon octicon-git-pull-request" height="16" role="img" version="1.1" viewBox="0 0 12 16" width="12"><path d="M11 11.28c0-1.73 0-6.28 0-6.28-0.03-0.78-0.34-1.47-0.94-2.06s-1.28-0.91-2.06-0.94c0 0-1.02 0-1 0V0L4 3l3 3V4h1c0.27 0.02 0.48 0.11 0.69 0.31s0.3 0.42 0.31 0.69v6.28c-0.59 0.34-1 0.98-1 1.72 0 1.11 0.89 2 2 2s2-0.89 2-2c0-0.73-0.41-1.38-1-1.72z m-1 2.92c-0.66 0-1.2-0.55-1.2-1.2s0.55-1.2 1.2-1.2 1.2 0.55 1.2 1.2-0.55 1.2-1.2 1.2zM4 3c0-1.11-0.89-2-2-2S0 1.89 0 3c0 0.73 0.41 1.38 1 1.72 0 1.55 0 5.56 0 6.56-0.59 0.34-1 0.98-1 1.72 0 1.11 0.89 2 2 2s2-0.89 2-2c0-0.73-0.41-1.38-1-1.72V4.72c0.59-0.34 1-0.98 1-1.72z m-0.8 10c0 0.66-0.55 1.2-1.2 1.2s-1.2-0.55-1.2-1.2 0.55-1.2 1.2-1.2 1.2 0.55 1.2 1.2z m-1.2-8.8c-0.66 0-1.2-0.55-1.2-1.2s0.55-1.2 1.2-1.2 1.2 0.55 1.2 1.2-0.55 1.2-1.2 1.2z"></path></svg>
+      <span itemprop="name">Pull requests</span>
+      <span class="counter">0</span>
+      <meta itemprop="position" content="3">
+</a>  </span>
+
+    <a href="/clojure/clojurescript/wiki" aria-selected="true" class="js-selected-navigation-item selected reponav-item" data-hotkey="g w" data-selected-links="repo_wiki /clojure/clojurescript/wiki">
+      <svg aria-hidden="true" class="octicon octicon-book" height="16" role="img" version="1.1" viewBox="0 0 16 16" width="16"><path d="M2 5h4v1H2v-1z m0 3h4v-1H2v1z m0 2h4v-1H2v1z m11-5H9v1h4v-1z m0 2H9v1h4v-1z m0 2H9v1h4v-1z m2-6v9c0 0.55-0.45 1-1 1H8.5l-1 1-1-1H1c-0.55 0-1-0.45-1-1V3c0-0.55 0.45-1 1-1h5.5l1 1 1-1h5.5c0.55 0 1 0.45 1 1z m-8 0.5l-0.5-0.5H1v9h6V3.5z m7-0.5H8.5l-0.5 0.5v8.5h6V3z"></path></svg>
+      Wiki
+</a>
+  <a href="/clojure/clojurescript/pulse" class="js-selected-navigation-item reponav-item" data-selected-links="pulse /clojure/clojurescript/pulse">
+    <svg aria-hidden="true" class="octicon octicon-pulse" height="16" role="img" version="1.1" viewBox="0 0 14 16" width="14"><path d="M11.5 8L8.8 5.4 6.6 8.5 5.5 1.6 2.38 8H0V10h3.6L4.5 8.2l0.9 5.4L9 8.5l1.6 1.5H14V8H11.5z"></path></svg>
+    Pulse
+</a>
+  <a href="/clojure/clojurescript/graphs" class="js-selected-navigation-item reponav-item" data-selected-links="repo_graphs repo_contributors /clojure/clojurescript/graphs">
+    <svg aria-hidden="true" class="octicon octicon-graph" height="16" role="img" version="1.1" viewBox="0 0 16 16" width="16"><path d="M16 14v1H0V0h1v14h15z m-11-1H3V8h2v5z m4 0H7V3h2v10z m4 0H11V6h2v7z"></path></svg>
+    Graphs
+</a>
+
+</nav>
+
+  </div>
+</div>
+
+<div class="container new-discussion-timeline experiment-repo-nav">
+  <div class="repository-content">
+
+    
+
+<div id="wiki-wrapper" class="wiki-wrapper page">
+<div class="gh-header">
+  <div class="gh-header-show">
+        <div class="gh-header-actions">
+          <a href="/clojure/clojurescript/wiki/Quick-Start/_edit" class="btn btn-sm ">Edit</a>
+          <a href="/clojure/clojurescript/wiki/_new" class="btn btn-sm btn-primary">New Page</a>
+        </div>
+    <h1 class="gh-header-title instapaper_title">Quick Start</h1>
+      <div class="gh-header-meta">
+        David Nolen edited this page <time datetime="2016-03-18T18:01:13Z" is="relative-time">Mar 18, 2016</time>
+        &middot;
+        <a href="/clojure/clojurescript/wiki/Quick-Start/_history" class="history">
+          201 revisions
+        </a>
+      </div>
+  </div>
+</div>
+<div id="wiki-content" class="wiki-content">
+  <div class="has-rightbar">
+
+  <div id="wiki-rightbar" class="wiki-rightbar">
+    <div class="wiki-pages-box readability-sidebar boxed-group flush js-wiki-pages-box collapsed" role="navigation">
+      
+<h3 class="js-wiki-toggle-collapse wiki-auxiliary-content">
+  <svg aria-hidden="true" class="octicon octicon-triangle-down caret-expanded" height="16" role="img" version="1.1" viewBox="0 0 12 16" width="12"><path d="M0 5l6 6 6-6H0z"></path></svg>
+  <svg aria-hidden="true" class="octicon octicon-triangle-right caret-collapsed" height="16" role="img" version="1.1" viewBox="0 0 6 16" width="6"><path d="M0 14l6-6L0 2v12z"></path></svg>
+  Pages <span class="counter">53</span>
+</h3>
+<div class="boxed-group-inner wiki-auxiliary-content wiki-auxiliary-content-no-bg">
+    <div class="filter-bar">
+      <input type="text" id="wiki-pages-filter" class="form-control input-sm input-block js-filterable-field" placeholder="Find a Page…" aria-label="Find a Page…" tabindex="2">
+    </div>
+
+  <ul class="wiki-pages" data-filterable-for="wiki-pages-filter" data-filterable-type="substring">
+    <li>
+      <strong><a href="/clojure/clojurescript/wiki" class="wiki-page-link">Home</a></strong>
+    </li>
+    <li>
+      <strong><a href="/clojure/clojurescript/wiki/Advanced-Compilation" class="wiki-page-link">Advanced Compilation</a></strong>
+    </li>
+    <li>
+      <strong><a href="/clojure/clojurescript/wiki/Atom" class="wiki-page-link">Atom</a></strong>
+    </li>
+    <li>
+      <strong><a href="/clojure/clojurescript/wiki/Bootstrapped-ClojureScript-FAQ" class="wiki-page-link">Bootstrapped ClojureScript FAQ</a></strong>
+    </li>
+    <li>
+      <strong><a href="/clojure/clojurescript/wiki/Bootstrapping-the-Compiler" class="wiki-page-link">Bootstrapping the Compiler</a></strong>
+    </li>
+    <li>
+      <strong><a href="/clojure/clojurescript/wiki/Building-the-compiler" class="wiki-page-link">Building the compiler</a></strong>
+    </li>
+    <li>
+      <strong><a href="/clojure/clojurescript/wiki/ClojureScript-Puppet-Manifest" class="wiki-page-link">ClojureScript Puppet Manifest</a></strong>
+    </li>
+    <li>
+      <strong><a href="/clojure/clojurescript/wiki/Common-Problems" class="wiki-page-link">Common Problems</a></strong>
+    </li>
+    <li>
+      <strong><a href="/clojure/clojurescript/wiki/Companies-Using-ClojureScript" class="wiki-page-link">Companies Using ClojureScript</a></strong>
+    </li>
+    <li>
+      <strong><a href="/clojure/clojurescript/wiki/Comparators" class="wiki-page-link">Comparators</a></strong>
+    </li>
+    <li>
+      <strong><a href="/clojure/clojurescript/wiki/Compile-Time-Type-Checking" class="wiki-page-link">Compile Time Type Checking</a></strong>
+    </li>
+    <li>
+      <strong><a href="/clojure/clojurescript/wiki/Compiler-Options" class="wiki-page-link">Compiler Options</a></strong>
+    </li>
+    <li>
+      <strong><a href="/clojure/clojurescript/wiki/Cursive" class="wiki-page-link">Cursive</a></strong>
+    </li>
+    <li>
+      <strong><a href="/clojure/clojurescript/wiki/Custom-Build-Tools" class="wiki-page-link">Custom Build Tools</a></strong>
+    </li>
+    <li>
+      <strong><a href="/clojure/clojurescript/wiki/Custom-REPLs" class="wiki-page-link">Custom REPLs</a></strong>
+    </li>
+    <li class="wiki-more-pages">
+      <strong><a href="/clojure/clojurescript/wiki/Dependencies" class="wiki-page-link">Dependencies</a></strong>
+    </li>
+    <li class="wiki-more-pages">
+      <strong><a href="/clojure/clojurescript/wiki/Developers" class="wiki-page-link">Developers</a></strong>
+    </li>
+    <li class="wiki-more-pages">
+      <strong><a href="/clojure/clojurescript/wiki/Differences-from-Clojure" class="wiki-page-link">Differences from Clojure</a></strong>
+    </li>
+    <li class="wiki-more-pages">
+      <strong><a href="/clojure/clojurescript/wiki/Emacs-&amp;-Inferior-Clojure-Interaction-Mode" class="wiki-page-link">Emacs &amp; Inferior Clojure Interaction Mode</a></strong>
+    </li>
+    <li class="wiki-more-pages">
+      <strong><a href="/clojure/clojurescript/wiki/Enhanced-JavaScript-Module-Support" class="wiki-page-link">Enhanced JavaScript Module Support</a></strong>
+    </li>
+    <li class="wiki-more-pages">
+      <strong><a href="/clojure/clojurescript/wiki/Exception-Handling" class="wiki-page-link">Exception Handling</a></strong>
+    </li>
+    <li class="wiki-more-pages">
+      <strong><a href="/clojure/clojurescript/wiki/FAQ-(for-JavaScript-developers)" class="wiki-page-link">FAQ (for JavaScript developers)</a></strong>
+    </li>
+    <li class="wiki-more-pages">
+      <strong><a href="/clojure/clojurescript/wiki/Google-Closure" class="wiki-page-link">Google Closure</a></strong>
+    </li>
+    <li class="wiki-more-pages">
+      <strong><a href="/clojure/clojurescript/wiki/Google-Closure-Library" class="wiki-page-link">Google Closure Library</a></strong>
+    </li>
+    <li class="wiki-more-pages">
+      <strong><a href="/clojure/clojurescript/wiki/Google-Summer-of-Code-2015" class="wiki-page-link">Google Summer of Code 2015</a></strong>
+    </li>
+    <li class="wiki-more-pages">
+      <strong><a href="/clojure/clojurescript/wiki/Launch-Plan" class="wiki-page-link">Launch Plan</a></strong>
+    </li>
+    <li class="wiki-more-pages">
+      <strong><a href="/clojure/clojurescript/wiki/lein-cljsbuild" class="wiki-page-link">lein cljsbuild</a></strong>
+    </li>
+    <li class="wiki-more-pages">
+      <strong><a href="/clojure/clojurescript/wiki/Light-Table" class="wiki-page-link">Light Table</a></strong>
+    </li>
+    <li class="wiki-more-pages">
+      <strong><a href="/clojure/clojurescript/wiki/Optional-Self-hosting" class="wiki-page-link">Optional Self hosting</a></strong>
+    </li>
+    <li class="wiki-more-pages">
+      <strong><a href="/clojure/clojurescript/wiki/Packaging-Foreign-Dependencies" class="wiki-page-link">Packaging Foreign Dependencies</a></strong>
+    </li>
+    <li class="wiki-more-pages">
+      <strong><a href="/clojure/clojurescript/wiki/Patches" class="wiki-page-link">Patches</a></strong>
+    </li>
+    <li class="wiki-more-pages">
+      <strong><a href="/clojure/clojurescript/wiki/Providing-IO-utilities" class="wiki-page-link">Providing IO utilities</a></strong>
+    </li>
+    <li class="wiki-more-pages">
+      <strong><a href="/clojure/clojurescript/wiki/Quick-Start" class="wiki-page-link">Quick Start</a></strong>
+    </li>
+    <li class="wiki-more-pages">
+      <strong><a href="/clojure/clojurescript/wiki/Rationale" class="wiki-page-link">Rationale</a></strong>
+    </li>
+    <li class="wiki-more-pages">
+      <strong><a href="/clojure/clojurescript/wiki/Reader" class="wiki-page-link">Reader</a></strong>
+    </li>
+    <li class="wiki-more-pages">
+      <strong><a href="/clojure/clojurescript/wiki/Release-plans" class="wiki-page-link">Release plans</a></strong>
+    </li>
+    <li class="wiki-more-pages">
+      <strong><a href="/clojure/clojurescript/wiki/Remote-REPL" class="wiki-page-link">Remote REPL</a></strong>
+    </li>
+    <li class="wiki-more-pages">
+      <strong><a href="/clojure/clojurescript/wiki/REPL-Options" class="wiki-page-link">REPL Options</a></strong>
+    </li>
+    <li class="wiki-more-pages">
+      <strong><a href="/clojure/clojurescript/wiki/REPL-stack-traces" class="wiki-page-link">REPL stack traces</a></strong>
+    </li>
+    <li class="wiki-more-pages">
+      <strong><a href="/clojure/clojurescript/wiki/Reporting-Bootstrap-Issues" class="wiki-page-link">Reporting Bootstrap Issues</a></strong>
+    </li>
+    <li class="wiki-more-pages">
+      <strong><a href="/clojure/clojurescript/wiki/Reporting-Issues" class="wiki-page-link">Reporting Issues</a></strong>
+    </li>
+    <li class="wiki-more-pages">
+      <strong><a href="/clojure/clojurescript/wiki/Road-Map" class="wiki-page-link">Road Map</a></strong>
+    </li>
+    <li class="wiki-more-pages">
+      <strong><a href="/clojure/clojurescript/wiki/Running-REPLs" class="wiki-page-link">Running REPLs</a></strong>
+    </li>
+    <li class="wiki-more-pages">
+      <strong><a href="/clojure/clojurescript/wiki/Running-the-tests" class="wiki-page-link">Running the tests</a></strong>
+    </li>
+    <li class="wiki-more-pages">
+      <strong><a href="/clojure/clojurescript/wiki/Source-maps" class="wiki-page-link">Source maps</a></strong>
+    </li>
+    <li class="wiki-more-pages">
+      <strong><a href="/clojure/clojurescript/wiki/Sublime-Text-2" class="wiki-page-link">Sublime Text 2</a></strong>
+    </li>
+    <li class="wiki-more-pages">
+      <strong><a href="/clojure/clojurescript/wiki/Testing" class="wiki-page-link">Testing</a></strong>
+    </li>
+    <li class="wiki-more-pages">
+      <strong><a href="/clojure/clojurescript/wiki/The-REPL-and-Evaluation-Environments" class="wiki-page-link">The REPL and Evaluation Environments</a></strong>
+    </li>
+    <li class="wiki-more-pages">
+      <strong><a href="/clojure/clojurescript/wiki/Underpinnings" class="wiki-page-link">Underpinnings</a></strong>
+    </li>
+    <li class="wiki-more-pages">
+      <strong><a href="/clojure/clojurescript/wiki/Using-cljc" class="wiki-page-link">Using cljc</a></strong>
+    </li>
+    <li class="wiki-more-pages">
+      <strong><a href="/clojure/clojurescript/wiki/Vim" class="wiki-page-link">Vim</a></strong>
+    </li>
+    <li class="wiki-more-pages">
+      <strong><a href="/clojure/clojurescript/wiki/Windows-Setup" class="wiki-page-link">Windows Setup</a></strong>
+    </li>
+    <li class="wiki-more-pages">
+      <strong><a href="/clojure/clojurescript/wiki/Working-with-Javascript-classes" class="wiki-page-link">Working with Javascript classes</a></strong>
+    </li>
+    <li class="wiki-more-pages-link">
+      <a href="#" class="js-wiki-more-pages-link">
+        Show 38 more pages…
+      </a>
+    </li>
+  </ul>
+</div>
+
+    </div>
+
+      <div class="gollum-markdown-content readability-sidebar box box-small">
+        <div class="wiki-custom-sidebar wiki-writable markdown-body">
+            <a href="/clojure/clojurescript/wiki/_Sidebar.md/_edit" class="wiki-edit-link" title="Edit sidebar">
+              <svg aria-hidden="true" class="octicon octicon-pencil" height="16" role="img" version="1.1" viewBox="0 0 14 16" width="14"><path d="M0 12v3h3l8-8-3-3L0 12z m3 2H1V12h1v1h1v1z m10.3-9.3l-1.3 1.3-3-3 1.3-1.3c0.39-0.39 1.02-0.39 1.41 0l1.59 1.59c0.39 0.39 0.39 1.02 0 1.41z"></path></svg>
+            </a>
+          <p><a class="internal present" href="/clojure/clojurescript/wiki/Home">Home</a></p>
+
+<h2>
+<a id="user-content-intro" class="anchor" href="#intro" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" role="img" version="1.1" viewbox="0 0 16 16" width="16"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>Intro</h2>
+
+<ul>
+<li><a class="internal present" href="/clojure/clojurescript/wiki/Rationale">Rationale</a></li>
+<li><a class="internal present" href="/clojure/clojurescript/wiki/Quick-Start">Quick Start</a></li>
+<li><a class="internal present" href="/clojure/clojurescript/wiki/Differences-from-Clojure">Differences from Clojure</a></li>
+<li><a href="Google%20Closure">Usage of Google Closure</a></li>
+</ul>
+
+<h2>
+<a id="user-content-reference" class="anchor" href="#reference" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" role="img" version="1.1" viewbox="0 0 16 16" width="16"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>Reference</h2>
+
+<ul>
+<li><a class="internal present" href="/clojure/clojurescript/wiki/Compiler-Options">Compiler Options</a></li>
+<li><a class="internal present" href="/clojure/clojurescript/wiki/REPL-Options">REPL Options</a></li>
+<li><a class="internal present" href="/clojure/clojurescript/wiki/Dependencies">Dependencies</a></li>
+</ul>
+
+<h2>
+<a id="user-content-tooling" class="anchor" href="#tooling" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" role="img" version="1.1" viewbox="0 0 16 16" width="16"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>Tooling</h2>
+
+<ul>
+<li><a class="internal present" href="/clojure/clojurescript/wiki/Running-REPLs">Running REPLs</a></li>
+<li><a class="internal present" href="/clojure/clojurescript/wiki/Testing">Testing</a></li>
+</ul>
+
+<h3>
+<a id="user-content-leiningen-plugins" class="anchor" href="#leiningen-plugins" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" role="img" version="1.1" viewbox="0 0 16 16" width="16"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>Leiningen plugins</h3>
+
+<ul>
+<li><a class="internal present" href="/clojure/clojurescript/wiki/lein-cljsbuild">lein-cljsbuild</a></li>
+<li><a href="https://github.com/bhauman/lein-figwheel">lein-figwheel</a></li>
+</ul>
+
+<h3>
+<a id="user-content-editors" class="anchor" href="#editors" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" role="img" version="1.1" viewbox="0 0 16 16" width="16"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>Editors</h3>
+
+<ul>
+<li><a class="internal present" href="/clojure/clojurescript/wiki/Sublime-Text-2">Sublime Text 2</a></li>
+<li><a class="internal present" href="/clojure/clojurescript/wiki/Emacs-%26-Inferior-Clojure-Interaction-Mode">Emacs &amp; Inferior Clojure Interaction Mode</a></li>
+<li><a class="internal present" href="/clojure/clojurescript/wiki/Vim">Vim</a></li>
+<li><a class="internal present" href="/clojure/clojurescript/wiki/Light-Table">Light Table</a></li>
+<li><a class="internal present" href="/clojure/clojurescript/wiki/Cursive">Cursive</a></li>
+</ul>
+
+<h2>
+<a id="user-content-additional-information" class="anchor" href="#additional-information" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" role="img" version="1.1" viewbox="0 0 16 16" width="16"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>Additional Information</h2>
+
+<ul>
+<li><a class="internal present" href="/clojure/clojurescript/wiki/Developers">Developers</a></li>
+<li><a class="internal present" href="/clojure/clojurescript/wiki/Companies-Using-ClojureScript">Companies-Using-ClojureScript</a></li>
+<li><a class="internal present" href="/clojure/clojurescript/wiki/FAQ-%28for-JavaScript-developers%29">FAQ (for JavaScript developers)</a></li>
+<li><a class="internal present" href="/clojure/clojurescript/wiki/Custom-REPLs">Custom-REPLs</a></li>
+<li><a class="internal present" href="/clojure/clojurescript/wiki/Road-Map">Road Map</a></li>
+<li><a class="internal present" href="/clojure/clojurescript/wiki/Bootstrapping-the-Compiler">Bootstrapping-the-Compiler</a></li>
+<li><a href="https://github.com/clojure/clojurescript/wiki#project-templates">Project Templates</a></li>
+</ul>
+
+        </div>
+      </div>
+
+    <div class="clone-url">
+      <h5>Clone this wiki locally</h5>
+      <div class="input-group js-zeroclipboard-container">
+        <input type="text" class="form-control input-sm text-small text-muted input-monospace js-url-field js-zeroclipboard-target"
+               value="https://github.com/clojure/clojurescript.wiki.git" readonly="readonly">
+        <span class="input-group-button">
+          <button aria-label="Copy to clipboard" class="js-zeroclipboard btn btn-sm zeroclipboard-button tooltipped tooltipped-s" data-copied-hint="Copied!" type="button"><svg aria-hidden="true" class="octicon octicon-clippy" height="16" role="img" version="1.1" viewBox="0 0 14 16" width="14"><path d="M2 12h4v1H2v-1z m5-6H2v1h5v-1z m2 3V7L6 10l3 3V11h5V9H9z m-4.5-1H2v1h2.5v-1zM2 11h2.5v-1H2v1z m9 1h1v2c-0.02 0.28-0.11 0.52-0.3 0.7s-0.42 0.28-0.7 0.3H1c-0.55 0-1-0.45-1-1V3c0-0.55 0.45-1 1-1h3C4 0.89 4.89 0 6 0s2 0.89 2 2h3c0.55 0 1 0.45 1 1v5h-1V5H1v9h10V12zM2 4h8c0-0.55-0.45-1-1-1h-1c-0.55 0-1-0.45-1-1s-0.45-1-1-1-1 0.45-1 1-0.45 1-1 1h-1c-0.55 0-1 0.45-1 1z"></path></svg></button>
+        </span>
+      </div>
+
+        <a href="github-mac://openRepo/https://github.com/clojure/clojurescript.wiki"
+           class="btn btn-sm sidebar-button"
+           title="Save this wiki to your computer and use it in GitHub Desktop."
+           aria-label="Save this wiki to your computer and use it in GitHub Desktop.">
+          <svg aria-hidden="true" class="octicon octicon-desktop-download" height="16" role="img" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 6h3V0h2v6h3L8 10 4 6z m11-4H11v1h4v8H1V3h4v-1H1c-0.55 0-1 0.45-1 1v9c0 0.55 0.45 1 1 1h5.34c-0.25 0.61-0.86 1.39-2.34 2h8c-1.48-0.61-2.09-1.39-2.34-2h5.34c0.55 0 1-0.45 1-1V3c0-0.55-0.45-1-1-1z"></path></svg>
+          Clone in Desktop
+        </a>
+
+    </div>
+  </div>
+
+  <div id="wiki-body" class="wiki-body gollum-markdown-content instapaper_body">
+      <div class="markdown-body">
+        <p>The only dependencies required for this tutorial are an installation of
+<a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html">Java 8</a>
+and the
+<a href="https://github.com/clojure/clojurescript/releases/download/r1.8.34/cljs.jar">standalone ClojureScript JAR</a>.
+ClojureScript itself only requires Java 7 but the standalone JAR comes
+bundled with useful
+<a href="http://www.oracle.com/technetwork/articles/java/jf14-nashorn-2126515.html">Nashorn</a>
+integration that requires Java 8.</p>
+
+<p>You must have Java 8 installed to proceed.</p>
+
+<p>Even if you are interested in a <a href="http://leiningen.org">Leiningen</a>, <a href="http://boot-clj.com">Boot</a>, <a href="https://github.com/bhauman/lein-figwheel">Figwheel</a>, or <a href="https://maven.apache.org/what-is-maven.html">Maven</a> based workflow this Quick Start is essential reading. It covers the
+fundamentals regardless of what tooling you decide to end up using.</p>
+
+<blockquote>
+<p><strong>Dear Reader</strong>: Do not edit this page without first consulting an experienced member of the ClojureScript community. This is one of the most important resources for beginners and it has been extensively verified on a variety of environments. If you believe you have found a mistake, there's a 99.9% chance you have not found a mistake. If you truly believe you have found an error in this document, please come find help on the IRC or Slack channels and we can help determine if this page needs edits. Thank you.</p>
+</blockquote>
+
+<h3>
+<a id="user-content-clojurescript-compiler" class="anchor" href="#clojurescript-compiler" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" role="img" version="1.1" viewbox="0 0 16 16" width="16"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>ClojureScript Compiler</h3>
+
+<p>The standalone ClojureScript JAR bundles 
+<a href="http://clojure.org">Clojure</a> 1.7.0. This supports simple scripting of
+the ClojureScript compiler and the bundled REPLs without an overly
+complicated command line interface.</p>
+
+<p><a href="https://github.com/clojure/clojurescript/releases/download/r1.8.34/cljs.jar">Download the standalone ClojureScript JAR</a>.</p>
+
+<blockquote>
+<p><strong>Debug Note</strong>: If you use <code>curl</code> to download the JAR, be sure to specify the <code>-L</code> flag to follow redirects.
+(Otherwise you'll end up with an HTML page of <a href="http://stackoverflow.com/questions/28481272/clojurescript-error-could-not-find-or-load-main-class-clojure-main#comment47580543_28481272">about 300 bytes</a>)
+Make sure the file is not renamed by your browser, eg. cljs(1).jar.</p>
+</blockquote>
+
+<p>Create a directory <code>hello_world</code> and copy the JAR into that directory,
+then from <em>inside</em> the <code>hello_world</code> directory:</p>
+
+<div class="highlight highlight-source-shell"><pre>mkdir -p src/hello_world<span class="pl-k">;</span>touch src/hello_world/core.cljs</pre></div>
+
+<p>For Windows:</p>
+
+<div class="highlight highlight-source-shell"><pre>md src<span class="pl-cce">\h</span>ello_world <span class="pl-k">&amp;</span> <span class="pl-c1">type</span> nul <span class="pl-k">&gt;&gt;</span>core.cljs <span class="pl-k">&amp;</span> move core.cljs src<span class="pl-cce">\h</span>ello_world</pre></div>
+
+<p>In your favorite text editor edit the <code>src/hello_world/core.cljs</code>
+to look like the following:</p>
+
+<div class="highlight highlight-source-clojure"><pre>(<span class="pl-k">ns</span> <span class="pl-e">hello-world.core</span>)
+
+(<span class="pl-en">enable-console-print!</span>)
+
+(<span class="pl-en">println</span> <span class="pl-s"><span class="pl-pds">"</span>Hello world!<span class="pl-pds">"</span></span>)</pre></div>
+
+<p>First we declare our namespace. Every ClojureScript file must declare
+a namespace and this namespace must match a path on disk. We then enable 
+direct printing to the commonly available JavaScript <code>console</code> object
+and print the famous message.</p>
+
+<p>In order to compile this we need a simple build script. ClojureScript
+is just a Clojure library and can be easily scripted in a few lines of
+<em>Clojure</em>. Create a file called <code>build.clj</code> in the current directory
+not in <code>src</code>. Note the name of this file does not matter. In this
+tutorial we'll always make our compiler helper scripts at the root
+of the project directory.</p>
+
+<p>Add the following Clojure code:</p>
+
+<div class="highlight highlight-source-clojure"><pre>(<span class="pl-k">require</span> 'cljs.build.api)
+
+(<span class="pl-en">cljs.build.api/build</span> <span class="pl-s"><span class="pl-pds">"</span>src<span class="pl-pds">"</span></span> {<span class="pl-c1">:output-to</span> <span class="pl-s"><span class="pl-pds">"</span>out/main.js<span class="pl-pds">"</span></span>})</pre></div>
+
+<p>We <code>require</code> the <code>cljs.build.api</code> namespace. We then invoke the
+standard function for building some ClojureScript source -
+<code>cljs.build.api/build</code>. This function only takes two arguments: the
+directory to compile and a map of options. In our case a simple
+<code>:output-to</code> will suffice for now.</p>
+
+<p>Let's build some ClojureScript:</p>
+
+<div class="highlight highlight-source-shell"><pre>java -cp cljs.jar:src clojure.main build.clj</pre></div>
+
+<p>On Windows:</p>
+
+<div class="highlight highlight-source-shell"><pre>java -cp <span class="pl-s"><span class="pl-pds">"</span>cljs.jar;src<span class="pl-pds">"</span></span> clojure.main build.clj</pre></div>
+
+<p>We invoke <code>java</code> and set the classpath to our JAR and the
+directory where our ClojureScript code lives. The <code>clojure.main</code>
+argument in this case allows us to easily execute a Clojure
+file.</p>
+
+<blockquote>
+<p><strong>Debug Note</strong>: If you encounter an error about <code>cljs.build.api</code> not being
+found, make sure that you didn't write <code>(require 'cljs.build.api')</code>,
+many popular text editors will emit a matching single quote even in
+their Clojure mode.</p>
+</blockquote>
+
+<p>Control should return to the shell relatively quickly and you
+will have an <code>out</code> directory with compiled JavaScript including
+your simple program. You will see that many files were produced in
+addition to the <code>out/main.js</code> we specified. We'll explain this
+momentarily but first let's see how you can easily include the
+compiled output on a web page.</p>
+
+<h2>
+<a id="user-content-using-clojurescript-on-a-web-page" class="anchor" href="#using-clojurescript-on-a-web-page" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" role="img" version="1.1" viewbox="0 0 16 16" width="16"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>Using ClojureScript on a Web Page</h2>
+
+<p>Create a file <code>index.html</code> and include the following:</p>
+
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">html</span>&gt;
+    &lt;<span class="pl-ent">body</span>&gt;
+<span class="pl-s1">        &lt;<span class="pl-ent">script</span> <span class="pl-e">type</span>=<span class="pl-s"><span class="pl-pds">"</span>text/javascript<span class="pl-pds">"</span></span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>out/main.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</span>
+    &lt;/<span class="pl-ent">body</span>&gt;
+&lt;/<span class="pl-ent">html</span>&gt;</pre></div>
+
+<p>Open this file in your favorite browser and find the JavaScript
+developer console so you can see the output. (Note that nothing will
+appear in the main browser window—no content is being rendered.)</p>
+
+<p>You will not see <code>"Hello world!"</code> but instead you will likely see
+an error like the following:</p>
+
+<pre><code>Uncaught ReferenceError: goog is not defined
+</code></pre>
+
+<p>In order to understand this error we must examine a few basics around
+the Google Closure Library. While the following section may seem
+somewhat roundabout, a short review on how Google Closure Library works
+will make simple bugs considerably easier to spot.</p>
+
+<h3>
+<a id="user-content-google-closure-library" class="anchor" href="#google-closure-library" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" role="img" version="1.1" viewbox="0 0 16 16" width="16"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>Google Closure Library</h3>
+
+<p>In order to abstract away JavaScript environment differences
+ClojureScript relies on the
+<a href="https://developers.google.com/closure/library/">Google Closure Library</a>
+(GCL). GCL supplies an important facility missing from JavaScript:
+namespaces and a way to declare dependencies between
+them. In fact ClojureScript namespaces get compiled to Google Closure
+namespaces.</p>
+
+<p>Loading dependencies correctly across various browser targets is a
+surprisingly tricky affair. GCL accomplishes this by maintaining a
+dependency graph. When you require a namespace it will write
+the needed script tags in dependency order for you.</p>
+
+<p>So what went wrong? If you look at <code>out/main.js</code> you will see some
+dependency graph building calls:</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-smi">goog</span>.<span class="pl-en">addDependency</span>(<span class="pl-s"><span class="pl-pds">"</span>base.js<span class="pl-pds">"</span></span>, [<span class="pl-s"><span class="pl-pds">'</span>goog<span class="pl-pds">'</span></span>], []);
+<span class="pl-smi">goog</span>.<span class="pl-en">addDependency</span>(<span class="pl-s"><span class="pl-pds">"</span>../cljs/core.js<span class="pl-pds">"</span></span>, [<span class="pl-s"><span class="pl-pds">'</span>cljs.core<span class="pl-pds">'</span></span>], <span class="pl-k">...</span>);
+<span class="pl-smi">goog</span>.<span class="pl-en">addDependency</span>(<span class="pl-s"><span class="pl-pds">"</span>../hello_world/core.js<span class="pl-pds">"</span></span>, [<span class="pl-s"><span class="pl-pds">'</span>hello_world.core<span class="pl-pds">'</span></span>], <span class="pl-k">...</span>);</pre></div>
+
+<p>But wait, where is this <code>goog</code> object coming from?</p>
+
+<p>Oops. We never loaded it! In order for GCL to bootstrap we must
+at least load <code>goog/base.js</code>. You'll see this is available in
+<code>out/goog/base.js</code>. Let's add this to your page now:</p>
+
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">html</span>&gt;
+    &lt;<span class="pl-ent">body</span>&gt;
+<span class="pl-s1">        &lt;<span class="pl-ent">script</span> <span class="pl-e">type</span>=<span class="pl-s"><span class="pl-pds">"</span>text/javascript<span class="pl-pds">"</span></span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>out/goog/base.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</span>
+<span class="pl-s1">        &lt;<span class="pl-ent">script</span> <span class="pl-e">type</span>=<span class="pl-s"><span class="pl-pds">"</span>text/javascript<span class="pl-pds">"</span></span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>out/main.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</span>
+    &lt;/<span class="pl-ent">body</span>&gt;
+&lt;/<span class="pl-ent">html</span>&gt;</pre></div>
+
+<p>Refresh the page.</p>
+
+<p>The error will be gone but you still won't see the desired <code>"Hello
+world!"</code>.</p>
+
+<p>Hrm. <code>out/main.js</code> didn't appear to have any of the logic that we
+wrote, in fact it only includes the needed dependency graph
+information for the ClojureScript standard library <code>cljs.core</code> and our
+namespace.</p>
+
+<p>Ah. The last step we missed was actually requiring our namespace to
+kick things off. Change <code>index.html</code> to the following.</p>
+
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">html</span>&gt;
+    &lt;<span class="pl-ent">body</span>&gt;
+<span class="pl-s1">        &lt;<span class="pl-ent">script</span> <span class="pl-e">type</span>=<span class="pl-s"><span class="pl-pds">"</span>text/javascript<span class="pl-pds">"</span></span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>out/goog/base.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</span>
+<span class="pl-s1">        &lt;<span class="pl-ent">script</span> <span class="pl-e">type</span>=<span class="pl-s"><span class="pl-pds">"</span>text/javascript<span class="pl-pds">"</span></span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>out/main.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</span>
+<span class="pl-s1">        &lt;<span class="pl-ent">script</span> <span class="pl-e">type</span>=<span class="pl-s"><span class="pl-pds">"</span>text/javascript<span class="pl-pds">"</span></span>&gt;</span>
+<span class="pl-s1">            <span class="pl-smi">goog</span>.<span class="pl-en">require</span>(<span class="pl-s"><span class="pl-pds">"</span>hello_world.core<span class="pl-pds">"</span></span>);</span>
+<span class="pl-s1">            <span class="pl-c">// Note the underscore "_"! </span></span>
+<span class="pl-s1">        &lt;/<span class="pl-ent">script</span>&gt;</span>
+    &lt;/<span class="pl-ent">body</span>&gt;
+&lt;/<span class="pl-ent">html</span>&gt;</pre></div>
+
+<p>Refresh your <code>index.html</code> and you should finally see <code>"Hello world!"</code>
+printing to the browser JavaScript console. If you're using a
+sufficiently modern browser you should even see the printing was
+invoked from a ClojureScript source file and not a JavaScript one
+thanks to source mapping (some browsers like Chrome require you to
+first enable source mapping, for more details
+<a href="https://developer.chrome.com/devtools/docs/javascript-debugging#source-maps">look here</a>).</p>
+
+<h3>
+<a id="user-content-less-boilerplate" class="anchor" href="#less-boilerplate" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" role="img" version="1.1" viewbox="0 0 16 16" width="16"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>Less Boilerplate</h3>
+
+<p>The previous section explained some important fundamental concepts
+around the Google Closure Library. However it also involved a
+substantial amount of boilerplate. We can eliminate this boilerplate
+by specifying a <code>:main</code> entry point in the options that we pass to
+<code>cljs.build.api/build</code>. Let's do that now:</p>
+
+<div class="highlight highlight-source-clojure"><pre>(<span class="pl-k">require</span> 'cljs.build.api)
+
+(<span class="pl-en">cljs.build.api/build</span> <span class="pl-s"><span class="pl-pds">"</span>src<span class="pl-pds">"</span></span>
+  {<span class="pl-c1">:main</span> 'hello-world.core
+   <span class="pl-c1">:output-to</span> <span class="pl-s"><span class="pl-pds">"</span>out/main.js<span class="pl-pds">"</span></span>})</pre></div>
+
+<p>Change your HTML to the following:</p>
+
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">html</span>&gt;
+    &lt;<span class="pl-ent">body</span>&gt;
+<span class="pl-s1">        &lt;<span class="pl-ent">script</span> <span class="pl-e">type</span>=<span class="pl-s"><span class="pl-pds">"</span>text/javascript<span class="pl-pds">"</span></span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>out/main.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</span>
+    &lt;/<span class="pl-ent">body</span>&gt;
+&lt;/<span class="pl-ent">html</span>&gt;</pre></div>
+
+<p>Rebuild on Mac or GNU/Linux:</p>
+
+<div class="highlight highlight-source-shell"><pre>java -cp cljs.jar:src clojure.main build.clj</pre></div>
+
+<p>On Windows:</p>
+
+<pre><code>java -cp "cljs.jar;src" clojure.main build.clj
+</code></pre>
+
+<p>Refresh the page and you should still see <code>"Hello world!"</code> printed to
+the JavaScript console. If you examine <code>out/main.js</code> you'll see that
+it writes out the boilerplate script tags for you. The previous contents of <code>main.js</code> are now in <code>out/cljs_deps.js</code>, which is loaded alongside our namespace by the new <code>out/main.js</code>.</p>
+
+<h3>
+<a id="user-content-auto-building" class="anchor" href="#auto-building" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" role="img" version="1.1" viewbox="0 0 16 16" width="16"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>Auto-building</h3>
+
+<p>The ClojureScript compiler supports incremental compilation. It's
+convenient to have the ClojureScript compiler watch a directory
+and recompile as needed. Let's make a new helper script <code>watch.clj</code>:</p>
+
+<div class="highlight highlight-source-clojure"><pre>(<span class="pl-k">require</span> 'cljs.build.api)
+
+(<span class="pl-en">cljs.build.api/watch</span> <span class="pl-s"><span class="pl-pds">"</span>src<span class="pl-pds">"</span></span>
+  {<span class="pl-c1">:main</span> 'hello-world.core
+   <span class="pl-c1">:output-to</span> <span class="pl-s"><span class="pl-pds">"</span>out/main.js<span class="pl-pds">"</span></span>})</pre></div>
+
+<p>Let's start auto building:</p>
+
+<div class="highlight highlight-source-shell"><pre>java -cp cljs.jar:src clojure.main watch.clj</pre></div>
+
+<p>You should see output like the following:</p>
+
+<pre><code>Building ...
+Reading analysis cache for jar:file:/.../cljs.jar!/cljs/core.cljs
+Analyzing src/hello_world/core.cljs
+... done. Elapsed 1.425505401 seconds
+</code></pre>
+
+<p>Edit <code>src/hello_world/core.cljs</code>. You should see recompilation
+output.</p>
+
+<p>Terminate auto building (using <code>Ctrl-C</code>) before proceeding to the next section.</p>
+
+<blockquote>
+<p><strong>Further Reading</strong>: While not required for the remainder of the Quick Start, it's highly recommended that you familiarize yourself with basics of <a href="https://developers.google.com/closure/library/index">Google Closure Library</a>. Many simple errors can be avoided by reinforcing your understanding of how Closure Library works.</p>
+</blockquote>
+
+<h2>
+<a id="user-content-browser-repl" class="anchor" href="#browser-repl" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" role="img" version="1.1" viewbox="0 0 16 16" width="16"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>Browser REPL</h2>
+
+<p>It's hard to imagine a productive Lisp experience without a REPL
+(Read-Eval-Print-Loop). ClojureScript ships with builtin REPL support
+for Node.js, Rhino, Nashorn, and browsers.</p>
+
+<p>Let's hook up a browser REPL to our project.</p>
+
+<p>First it is recommended that you install
+<a href="http://utopia.knoware.nl/%7Ehlub/uck/rlwrap/">rlwrap</a>. Under OS X the
+easiest way is to use <a href="http://brew.sh">brew</a> and <code>brew install
+rlwrap</code>.</p>
+
+<p>Let's create a REPL script <code>repl.clj</code>:</p>
+
+<div class="highlight highlight-source-clojure"><pre>(<span class="pl-k">require</span> 'cljs.repl)
+(<span class="pl-k">require</span> 'cljs.build.api)
+(<span class="pl-k">require</span> 'cljs.repl.browser)
+
+(<span class="pl-en">cljs.build.api/build</span> <span class="pl-s"><span class="pl-pds">"</span>src<span class="pl-pds">"</span></span>
+  {<span class="pl-c1">:main</span> 'hello-world.core
+   <span class="pl-c1">:output-to</span> <span class="pl-s"><span class="pl-pds">"</span>out/main.js<span class="pl-pds">"</span></span>
+   <span class="pl-c1">:verbose</span> <span class="pl-c1">true</span>})
+
+(<span class="pl-en">cljs.repl/repl</span> (<span class="pl-en">cljs.repl.browser/repl-env</span>)
+  <span class="pl-c1">:watch</span> <span class="pl-s"><span class="pl-pds">"</span>src<span class="pl-pds">"</span></span>
+  <span class="pl-c1">:output-dir</span> <span class="pl-s"><span class="pl-pds">"</span>out<span class="pl-pds">"</span></span>)</pre></div>
+
+<p>We build the project at least once before constructing the REPL.</p>
+
+<p>REPLs are always constructed in the same way. The first argument to
+<code>cljs.repl/repl</code> is the REPL evaluation environment (Node.js, Rhino,
+Nashorn, browser), the subsequent arguments are the same arguments you
+pass to <code>cljs.build.api/build</code> in addition to several options that are
+specific to REPLs. Note that we supply a <code>:watch</code> option with a source
+directory. This conveniently starts a REPL along with an auto building
+process. The auto building process will write its activity to
+<code>out/watch.log</code> so you can easily <code>tail -f out/watch.log</code>. We also
+specify <code>:output-dir</code> so that the REPL can reuse compiled files
+generated by the build.</p>
+
+<p>We also need to modify our source to load the browser REPL:</p>
+
+<div class="highlight highlight-source-clojure"><pre>(<span class="pl-k">ns</span> <span class="pl-e">hello-world.core</span>
+  (<span class="pl-c1">:require</span> [clojure.browser.repl <span class="pl-c1">:as</span> repl]))
+
+(<span class="pl-k">defonce</span> conn
+  (<span class="pl-en">repl/connect</span> <span class="pl-s"><span class="pl-pds">"</span>http://localhost:9000/repl<span class="pl-pds">"</span></span>)) 
+
+(<span class="pl-en">enable-console-print!</span>)
+
+(<span class="pl-en">println</span> <span class="pl-s"><span class="pl-pds">"</span>Hello world!<span class="pl-pds">"</span></span>)</pre></div>
+
+<p>We create the connection with <code>defonce</code>. This ensures the connection
+is constructed only one time - we may reload this namespace during
+development and we don't want multiple connection instances.</p>
+
+<p>Let's try it:</p>
+
+<div class="highlight highlight-source-clojure"><pre>rlwrap java -cp cljs.jar:src clojure.main repl.clj</pre></div>
+
+<p>The first time will be somewhat slow as the REPL communication script
+needs to build. You will also see innocuous <code>WARNING</code>s from the Google
+Closure Compiler that can be ignored. You should eventually see the
+following message:</p>
+
+<pre><code>Waiting for browser to connect ...
+</code></pre>
+
+<p>Point your web browser at http://localhost:9000.</p>
+
+<p>You should get a REPL. (Note that the REPL will appear in your terminal, not in the browser.) </p>
+
+<p>Try evaluating a simple expression like <code>(+ 1 2)</code>.</p>
+
+<blockquote>
+<p><strong>Debug Note</strong>: If the REPL doesn't connect immediately try
+refreshing the browser a few times (Chrome &amp; Firefox tend to be more
+stable than Safari). Note that eval will be slow in some browsers if
+you don't have the browser REPL tab focused. If for some reason the
+REPL completely hangs, just refresh the page.</p>
+</blockquote>
+
+<p>Run <code>tail -f out/watch.log</code> in a fresh terminal to view auto build
+progress.</p>
+
+<p>Try evaluating some expressions like <code>(first [1 2 3])</code>, or
+<code>(doc first)</code>, <code>(source first)</code>.</p>
+
+<p>Change your <code>src/hello_world/core.cljs</code> source file to look
+like the following:</p>
+
+<div class="highlight highlight-source-clojure"><pre>(<span class="pl-k">ns</span> <span class="pl-e">hello-world.core</span>
+  (<span class="pl-c1">:require</span> [clojure.browser.repl <span class="pl-c1">:as</span> repl]))
+
+(<span class="pl-k">defonce</span> conn
+  (<span class="pl-en">repl/connect</span> <span class="pl-s"><span class="pl-pds">"</span>http://localhost:9000/repl<span class="pl-pds">"</span></span>))
+
+(<span class="pl-en">enable-console-print!</span>)
+
+(<span class="pl-en">println</span> <span class="pl-s"><span class="pl-pds">"</span>Hello world!<span class="pl-pds">"</span></span>)
+
+<span class="pl-c">;; ADDED</span>
+(<span class="pl-k">defn</span> <span class="pl-e">foo</span> [a b]
+  (<span class="pl-en">+</span> a b))</pre></div>
+
+<p>At the REPL prompt, require your namespace by evaluating
+<code>(require '[hello-world.core :as hello])</code>. Try evaluating
+<code>(hello/foo 2 3)</code>, you should get the result <code>5</code>.</p>
+
+<p>Change your source file so that <code>foo</code> uses <code>*</code> instead of
+<code>+</code>:</p>
+
+<div class="highlight highlight-source-clojure"><pre>(<span class="pl-k">ns</span> <span class="pl-e">hello-world.core</span>
+  (<span class="pl-c1">:require</span> [clojure.browser.repl <span class="pl-c1">:as</span> repl]))
+
+(<span class="pl-k">defonce</span> conn
+  (<span class="pl-en">repl/connect</span> <span class="pl-s"><span class="pl-pds">"</span>http://localhost:9000/repl<span class="pl-pds">"</span></span>))
+
+(<span class="pl-en">enable-console-print!</span>)
+
+(<span class="pl-en">println</span> <span class="pl-s"><span class="pl-pds">"</span>Hello world!<span class="pl-pds">"</span></span>)
+
+(<span class="pl-k">defn</span> <span class="pl-e">foo</span> [a b]
+  (<span class="pl-en">*</span> a b)) <span class="pl-c">;; CHANGED</span></pre></div>
+
+<p>We can get this new definition in our REPL by appending a <code>:reload</code> keyword 
+to our require statement thereby forcing a reload. 
+Evaluate <code>(require '[hello-world.core :as hello] :reload)</code> and try
+<code>(hello/foo 2 3)</code> you should get <code>6</code> this time.</p>
+
+<p>Lets make a mistake. Try evaluating <code>(ffirst [1])</code>. You should get a
+source mapped stack trace pointing at ClojureScript source locations
+not JavaScript ones. This makes debugging a lot nicer.</p>
+
+<h2>
+<a id="user-content-production-builds" class="anchor" href="#production-builds" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" role="img" version="1.1" viewbox="0 0 16 16" width="16"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>Production Builds</h2>
+
+<p>You may have noticed that <code>out</code> contains a lot of
+JavaScript. Fortunately the ClojureScript compiler generates output
+optimized for the Google Closure Compiler. The Google Closure Compiler
+performs many optimizations, but the most significant for browser-based
+clients are minification and dead code elimination.</p>
+
+<p>Let's make a new helper build script <code>release.clj</code>, it should
+look like the following:</p>
+
+<div class="highlight highlight-source-clojure"><pre>(<span class="pl-k">require</span> 'cljs.build.api)
+
+(<span class="pl-en">cljs.build.api/build</span> <span class="pl-s"><span class="pl-pds">"</span>src<span class="pl-pds">"</span></span>
+  {<span class="pl-c1">:output-to</span> <span class="pl-s"><span class="pl-pds">"</span>out/main.js<span class="pl-pds">"</span></span>
+   <span class="pl-c1">:optimizations</span> <span class="pl-c1">:advanced</span>})
+
+(<span class="pl-en">System/exit</span> <span class="pl-c1">0</span>)</pre></div>
+
+<p>Under <code>:advanced</code> optimizations <code>:main</code> is not needed as advanced
+compilation creates a single JavaScript artifact. We also add a
+<code>(System/exit 0)</code> as the Google Closure Compiler creates a thread pool
+that isn't shutdown - we know we're done we can just exit.</p>
+
+<p>Let's remove the dev time REPL bits from <code>src/hello_world/core.cljs</code>:</p>
+
+<div class="highlight highlight-source-clojure"><pre>(<span class="pl-k">ns</span> <span class="pl-e">hello-world.core</span>)
+
+(<span class="pl-en">enable-console-print!</span>)
+
+(<span class="pl-en">println</span> <span class="pl-s"><span class="pl-pds">"</span>Hello world!<span class="pl-pds">"</span></span>)</pre></div>
+
+<p>Let's create a release build:</p>
+
+<div class="highlight highlight-source-clojure"><pre>java -cp cljs.jar:src clojure.main release.clj</pre></div>
+
+<p>This process will take significantly longer which is why we don't use
+this compilation mode for development.</p>
+
+<p>Open <code>index.html</code>, you should still see <code>"Hello world!"</code> printed.</p>
+
+<p>Examine <code>out/main.js</code>, the file size should be around 80K. If you zip
+this file you'll see that it's around 19K. This is significantly
+smaller than a jQuery dependency yet when using ClojureScript you have
+implicit dependencies on the entire ClojureScript standard library
+(10KLOC) and the Google Closure Library (300KLOC). You can thank
+dead code elimination.</p>
+
+<h2>
+<a id="user-content-running-clojurescript-on-nodejs" class="anchor" href="#running-clojurescript-on-nodejs" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" role="img" version="1.1" viewbox="0 0 16 16" width="16"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>Running ClojureScript on Node.js</h2>
+
+<p>First install Node.js. For instructions on installing Node.js, see the
+<a href="https://github.com/joyent/node/wiki/Installation">Node.js wiki</a>. Only
+the current stable versions of Node.js (&gt;= <code>0.12.X</code>) are supported at
+this time. Your <code>src/hello_world/core.cljs</code> should look like the following:</p>
+
+<div class="highlight highlight-source-clojure"><pre>(<span class="pl-k">ns</span> <span class="pl-e">hello-world.core</span>
+  (<span class="pl-c1">:require</span> [cljs.nodejs <span class="pl-c1">:as</span> nodejs]))
+
+(<span class="pl-en">nodejs/enable-util-print!</span>)
+
+(<span class="pl-k">defn</span> <span class="pl-e">-main</span> [&amp; args]
+  (<span class="pl-en">println</span> <span class="pl-s"><span class="pl-pds">"</span>Hello world!<span class="pl-pds">"</span></span>))
+
+(<span class="pl-en">set!</span> *main-cli-fn* -main)</pre></div>
+
+<p>Make a build helper file called <code>node.clj</code>:</p>
+
+<div class="highlight highlight-source-clojure"><pre>(<span class="pl-k">require</span> 'cljs.build.api)
+
+(<span class="pl-en">cljs.build.api/build</span> <span class="pl-s"><span class="pl-pds">"</span>src<span class="pl-pds">"</span></span>
+  {<span class="pl-c1">:main</span> 'hello-world.core
+   <span class="pl-c1">:output-to</span> <span class="pl-s"><span class="pl-pds">"</span>main.js<span class="pl-pds">"</span></span>
+   <span class="pl-c1">:target</span> <span class="pl-c1">:nodejs</span>})</pre></div>
+
+<p>The only differences are that we had to specify a <code>:nodejs</code> target and
+we do not output <code>main.js</code> to the <code>out</code> directory. This is important
+due to the way that Node.js resolves JavaScript source files.</p>
+
+<p>Node.js has great source mapping support, in order to enable it just
+install <code>source-map-support</code>:</p>
+
+<pre><code>npm install source-map-support
+</code></pre>
+
+<p>Let's build your Node project:</p>
+
+<pre><code>java -cp cljs.jar:src clojure.main node.clj
+</code></pre>
+
+<p>You can run your file with:</p>
+
+<pre><code>node main.js
+</code></pre>
+
+<blockquote>
+<p><strong>Note</strong>: Under Node.js there is little reason to use advanced optimizations. While advanced optimizations does apply performance related optimizations, these are now largely obviated by optimizations present in modern JavaScript virtual machines like V8, SpiderMonkey, and JavaScriptCore. For Node.js, <code>:simple</code> or <code>:none</code> optimizations suffice and using them removes the need for extra steps like supplying an externs file.</p>
+</blockquote>
+
+<h3>
+<a id="user-content-nodejs-repl" class="anchor" href="#nodejs-repl" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" role="img" version="1.1" viewbox="0 0 16 16" width="16"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>Node.js REPL</h3>
+
+<p>Running a Node.js REPL is much simpler than running a browser
+REPL. Create a helper build file called <code>node_repl.clj</code> that looks
+like the following:</p>
+
+<div class="highlight highlight-source-clojure"><pre>(<span class="pl-k">require</span> 'cljs.repl)
+(<span class="pl-k">require</span> 'cljs.build.api)
+(<span class="pl-k">require</span> 'cljs.repl.node)
+
+(<span class="pl-en">cljs.build.api/build</span> <span class="pl-s"><span class="pl-pds">"</span>src<span class="pl-pds">"</span></span>
+  {<span class="pl-c1">:main</span> 'hello-world.core
+   <span class="pl-c1">:output-to</span> <span class="pl-s"><span class="pl-pds">"</span>out/main.js<span class="pl-pds">"</span></span>
+   <span class="pl-c1">:verbose</span> <span class="pl-c1">true</span>})
+
+(<span class="pl-en">cljs.repl/repl</span> (<span class="pl-en">cljs.repl.node/repl-env</span>)
+  <span class="pl-c1">:watch</span> <span class="pl-s"><span class="pl-pds">"</span>src<span class="pl-pds">"</span></span>
+  <span class="pl-c1">:output-dir</span> <span class="pl-s"><span class="pl-pds">"</span>out<span class="pl-pds">"</span></span>)</pre></div>
+
+<p>There's no need to add any REPL specific bits to
+<code>src/hello_world/core.cljs</code>, make sure it looks as described in the
+previous section.</p>
+
+<p>Let's start the REPL:</p>
+
+<pre><code>rlwrap java -cp cljs.jar:src clojure.main node_repl.clj
+</code></pre>
+
+<p>All the previously described REPL interactions for the browser should
+work.</p>
+
+<h2>
+<a id="user-content-dependencies" class="anchor" href="#dependencies" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" role="img" version="1.1" viewbox="0 0 16 16" width="16"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>Dependencies</h2>
+
+<p>ClojureScript supports a wide variety of options for including
+ClojureScript and JavaScript dependencies (see <a class="internal present" href="/clojure/clojurescript/wiki/Dependencies">Dependencies</a> for details). However the simplest
+approach is to include a properly packaged JAR on the
+classpath. <a href="http://cljsjs.github.io">CLJSJS</a> provides a nice set of
+curated JavaScript libraries that suffices to demonstrate how
+dependencies are handled.</p>
+
+<p><a href="http://facebook.github.io/react/">React</a> is a popular dependency for
+ClojureScript projects. <a href="http://cljsjs.github.io">CLJSJS</a> provides a
+<a href="https://github.com/cljsjs/packages/tree/master/react">bundled version</a>. Let's
+see how to include it.</p>
+
+<p>Grab the JAR from <a href="https://clojars.org">Clojars</a>:</p>
+
+<pre><code>curl -O https://clojars.org/repo/cljsjs/react/0.12.2-8/react-0.12.2-8.jar
+</code></pre>
+
+<p>Let's edit our simple program to look like the following so that React
+is properly required:</p>
+
+<div class="highlight highlight-source-clojure"><pre>(<span class="pl-k">ns</span> <span class="pl-e">hello-world.core</span>
+  (<span class="pl-c1">:require</span> cljsjs.react))
+
+(<span class="pl-en">enable-console-print!</span>)
+
+(<span class="pl-en">println</span> <span class="pl-s"><span class="pl-pds">"</span>Hello React!<span class="pl-pds">"</span></span>)</pre></div>
+
+<p>Let's rebuild our project, all we need to do is extend our classpath
+to include the CLJSJS React JAR.</p>
+
+<pre><code>java -cp cljs.jar:src:react-0.12.2-8.jar clojure.main build.clj
+</code></pre>
+
+<p>If you refresh your <code>index.html</code> page you should see the usual React
+log indicating that React was successfully loaded.</p>
+
+<p>If you have a few dependencies, one convention is to put them into
+a folder called <code>lib</code>. Then you can launch your scripts like so:</p>
+
+<pre><code>java -cp 'cljs.jar:lib/*:src' clojure.main build.clj
+</code></pre>
+
+<p>As your dependency graph becomes more sophisticated it may make sense
+to rely on Maven or Leiningen to manage dependencies for you. Please
+refer to <a class="internal present" href="/clojure/clojurescript/wiki/Dependencies">Dependencies</a> for a comprehensive tutorial. What follows
+is just the basics.</p>
+
+<h3>
+<a id="user-content-leiningen" class="anchor" href="#leiningen" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" role="img" version="1.1" viewbox="0 0 16 16" width="16"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>Leiningen</h3>
+
+<p>All the commands above may be executed with the <code>run</code> feature of
+Leiningen. With Leiningen you do not need to specify the classpath.
+For example for a REPL you would do something like the following from
+your project directory:</p>
+
+<pre><code>lein run -m clojure.main repl.clj
+</code></pre>
+
+<p>One important thing to remember with Leiningen is the <code>:source-paths</code> 
+configuration parameter. The <code>:source-paths</code>, found in the project.clj, 
+are appended to the classpath. For a ClojureScript build you should 
+include all the source paths to your ClojureScript sources in the 
+<code>:source-paths</code> parameter. The path "src" is included by default.</p>
+
+<p>This is especially important if you use another path besides "src".</p>
+
+<p>If you have any questions about the classpath you can see it easily by typing 
+<code>lein classpath</code>.</p>
+
+<h3>
+<a id="user-content-maven" class="anchor" href="#maven" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" role="img" version="1.1" viewbox="0 0 16 16" width="16"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>Maven</h3>
+
+<p>Same as Leiningen, you can use Maven to run the above scripts and you
+do not need to specify the classpath. Add the <code>clojure-maven-plugin</code> to 
+your <code>pom.xml</code>:</p>
+
+<div class="highlight highlight-text-xml"><pre>&lt;<span class="pl-ent">project</span> <span class="pl-e">xmlns</span>=<span class="pl-s"><span class="pl-pds">"</span>...<span class="pl-pds">"</span></span>
+         <span class="pl-e">xsi</span><span class="pl-e">:</span><span class="pl-e">schemaLocation</span>=<span class="pl-s"><span class="pl-pds">"</span>....<span class="pl-pds">"</span></span>&gt;
+    &lt;<span class="pl-ent">modelVersion</span>&gt;4.0.0&lt;/<span class="pl-ent">modelVersion</span>&gt;
+    ...
+    &lt;<span class="pl-ent">build</span>&gt;
+        &lt;<span class="pl-ent">plugins</span>&gt;
+            &lt;<span class="pl-ent">plugin</span>&gt;
+                &lt;<span class="pl-ent">groupId</span>&gt;com.theoryinpractise&lt;/<span class="pl-ent">groupId</span>&gt;
+                &lt;<span class="pl-ent">artifactId</span>&gt;clojure-maven-plugin&lt;/<span class="pl-ent">artifactId</span>&gt;
+                &lt;<span class="pl-ent">version</span>&gt;1.7.1&lt;/<span class="pl-ent">version</span>&gt;
+                &lt;<span class="pl-ent">extensions</span>&gt;true&lt;/<span class="pl-ent">extensions</span>&gt;
+            &lt;/<span class="pl-ent">plugin</span>&gt;
+        &lt;/<span class="pl-ent">plugins</span>&gt;
+    &lt;/<span class="pl-ent">build</span>&gt;
+    ...
+&lt;/<span class="pl-ent">project</span>&gt;</pre></div>
+
+<p>Then you can start a repl with the <code>clojure:run</code> task:</p>
+
+<pre><code>mvn clojure:run -Dclojure.script=repl.clj
+</code></pre>
+
+      </div>
+
+  </div>
+  </div>
+</div>
+</div>
+
+
+  </div>
+  <div class="modal-backdrop"></div>
+</div>
+
+
+    </div>
+  </div>
+
+    </div>
+
+        <div class="container site-footer-container">
+  <div class="site-footer" role="contentinfo">
+    <ul class="site-footer-links right">
+        <li><a href="https://status.github.com/" data-ga-click="Footer, go to status, text:status">Status</a></li>
+      <li><a href="https://developer.github.com" data-ga-click="Footer, go to api, text:api">API</a></li>
+      <li><a href="https://training.github.com" data-ga-click="Footer, go to training, text:training">Training</a></li>
+      <li><a href="https://shop.github.com" data-ga-click="Footer, go to shop, text:shop">Shop</a></li>
+        <li><a href="https://github.com/blog" data-ga-click="Footer, go to blog, text:blog">Blog</a></li>
+        <li><a href="https://github.com/about" data-ga-click="Footer, go to about, text:about">About</a></li>
+
+    </ul>
+
+    <a href="https://github.com" aria-label="Homepage" class="site-footer-mark">
+      <svg aria-hidden="true" class="octicon octicon-mark-github" height="24" role="img" title="GitHub " version="1.1" viewBox="0 0 16 16" width="24"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59 0.4 0.07 0.55-0.17 0.55-0.38 0-0.19-0.01-0.82-0.01-1.49-2.01 0.37-2.53-0.49-2.69-0.94-0.09-0.23-0.48-0.94-0.82-1.13-0.28-0.15-0.68-0.52-0.01-0.53 0.63-0.01 1.08 0.58 1.23 0.82 0.72 1.21 1.87 0.87 2.33 0.66 0.07-0.52 0.28-0.87 0.51-1.07-1.78-0.2-3.64-0.89-3.64-3.95 0-0.87 0.31-1.59 0.82-2.15-0.08-0.2-0.36-1.02 0.08-2.12 0 0 0.67-0.21 2.2 0.82 0.64-0.18 1.32-0.27 2-0.27 0.68 0 1.36 0.09 2 0.27 1.53-1.04 2.2-0.82 2.2-0.82 0.44 1.1 0.16 1.92 0.08 2.12 0.51 0.56 0.82 1.27 0.82 2.15 0 3.07-1.87 3.75-3.65 3.95 0.29 0.25 0.54 0.73 0.54 1.48 0 1.07-0.01 1.93-0.01 2.2 0 0.21 0.15 0.46 0.55 0.38C13.71 14.53 16 11.53 16 8 16 3.58 12.42 0 8 0z"></path></svg>
+</a>
+    <ul class="site-footer-links">
+      <li>&copy; 2016 <span title="0.23339s from github-fe125-cp1-prd.iad.github.net">GitHub</span>, Inc.</li>
+        <li><a href="https://github.com/site/terms" data-ga-click="Footer, go to terms, text:terms">Terms</a></li>
+        <li><a href="https://github.com/site/privacy" data-ga-click="Footer, go to privacy, text:privacy">Privacy</a></li>
+        <li><a href="https://github.com/security" data-ga-click="Footer, go to security, text:security">Security</a></li>
+        <li><a href="https://github.com/contact" data-ga-click="Footer, go to contact, text:contact">Contact</a></li>
+        <li><a href="https://help.github.com" data-ga-click="Footer, go to help, text:help">Help</a></li>
+    </ul>
+  </div>
+</div>
+
+
+
+    
+    
+
+    <div id="ajax-error-message" class="ajax-error-message flash flash-error">
+      <svg aria-hidden="true" class="octicon octicon-alert" height="16" role="img" version="1.1" viewBox="0 0 16 16" width="16"><path d="M15.72 12.5l-6.85-11.98C8.69 0.21 8.36 0.02 8 0.02s-0.69 0.19-0.87 0.5l-6.85 11.98c-0.18 0.31-0.18 0.69 0 1C0.47 13.81 0.8 14 1.15 14h13.7c0.36 0 0.69-0.19 0.86-0.5S15.89 12.81 15.72 12.5zM9 12H7V10h2V12zM9 9H7V5h2V9z"></path></svg>
+      <button type="button" class="flash-close js-flash-close js-ajax-error-dismiss" aria-label="Dismiss error">
+        <svg aria-hidden="true" class="octicon octicon-x" height="16" role="img" version="1.1" viewBox="0 0 12 16" width="12"><path d="M7.48 8l3.75 3.75-1.48 1.48-3.75-3.75-3.75 3.75-1.48-1.48 3.75-3.75L0.77 4.25l1.48-1.48 3.75 3.75 3.75-3.75 1.48 1.48-3.75 3.75z"></path></svg>
+      </button>
+      Something went wrong with that request. Please try again.
+    </div>
+
+
+      
+      <script crossorigin="anonymous" integrity="sha256-fZcqMi2uFUKrt8tg8N4Hrql7FBvk4zq0LsAERY6sJfQ=" src="https://assets-cdn.github.com/assets/frameworks-7d972a322dae1542abb7cb60f0de07aea97b141be4e33ab42ec004458eac25f4.js"></script>
+      <script async="async" crossorigin="anonymous" integrity="sha256-fxWGKdKUjJz4odkzg3n6aKvQOLuBUpmo+wdsRVeqicg=" src="https://assets-cdn.github.com/assets/github-7f158629d2948c9cf8a1d9338379fa68abd038bb815299a8fb076c4557aa89c8.js"></script>
+      
+      
+      
+        <script crossorigin="anonymous" integrity="sha256-wnQQRE6z1hvF0rLtVJDCX1YHb6GXx2xlDzQgoVGTJ0Y=" src="https://assets-cdn.github.com/assets/wiki-c27410444eb3d61bc5d2b2ed5490c25f56076fa197c76c650f3420a151932746.js"></script>
+
+    <div class="js-stale-session-flash stale-session-flash flash flash-warn flash-banner hidden">
+      <svg aria-hidden="true" class="octicon octicon-alert" height="16" role="img" version="1.1" viewBox="0 0 16 16" width="16"><path d="M15.72 12.5l-6.85-11.98C8.69 0.21 8.36 0.02 8 0.02s-0.69 0.19-0.87 0.5l-6.85 11.98c-0.18 0.31-0.18 0.69 0 1C0.47 13.81 0.8 14 1.15 14h13.7c0.36 0 0.69-0.19 0.86-0.5S15.89 12.81 15.72 12.5zM9 12H7V10h2V12zM9 9H7V5h2V9z"></path></svg>
+      <span class="signed-in-tab-flash">You signed in with another tab or window. <a href="">Reload</a> to refresh your session.</span>
+      <span class="signed-out-tab-flash">You signed out in another tab or window. <a href="">Reload</a> to refresh your session.</span>
+    </div>
+    <div class="facebox" id="facebox" style="display:none;">
+  <div class="facebox-popup">
+    <div class="facebox-content" role="dialog" aria-labelledby="facebox-header" aria-describedby="facebox-description">
+    </div>
+    <button type="button" class="facebox-close js-facebox-close" aria-label="Close modal">
+      <svg aria-hidden="true" class="octicon octicon-x" height="16" role="img" version="1.1" viewBox="0 0 12 16" width="12"><path d="M7.48 8l3.75 3.75-1.48 1.48-3.75-3.75-3.75 3.75-1.48-1.48 3.75-3.75L0.77 4.25l1.48-1.48 3.75 3.75 3.75-3.75 1.48 1.48-3.75 3.75z"></path></svg>
+    </button>
+  </div>
+</div>
+
+  </body>
+</html>
+
