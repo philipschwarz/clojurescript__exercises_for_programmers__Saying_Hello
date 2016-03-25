@@ -8,10 +8,6 @@
 
 (println "Hello world!")
 
-;; ADDED
-(defn foo [a b]
-  (+ a b))
-
 (defn greet [text]
   (let [stripWhitespace (fn [text] (clojure.string/replace text #"\\s+" ""))
         name (stripWhitespace text)
